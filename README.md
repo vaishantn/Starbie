@@ -1,33 +1,69 @@
 # Starbie ⭐
 
-A tiny motion-controlled digital pet—basically a desktop Tamagotchi! 
+**Starbie** is a tiny, interactive motion-controlled digital pet—think of it as a custom-built, hardware-hackable desktop Tamagotchi! Designed from scratch as a custom PCB, Starbie brings a virtual pet to life using an embedded microcontroller, a crisp OLED display, environmental sensors, tilt detection, and tactile mechanical keyboard switches.
 
-## About
-Starbie is an interactive hardware project built around a custom PCB. It features a microcontroller, an OLED display to show your digital pet, motion and environment sensors, and tactile mechanical keyboard switches for user input.
+---
 
-## Features
-- **Motion Control:** Uses an MPU6050 sensor to detect tilt and motion.
-- **Environment Tracking:** Includes a DHT11 sensor to check temperature and humidity.
-- **Interactive Input:** Built with Cherry MX mechanical switches.
-- **Visual Display:** Equipped with a sharp OLED screen to bring your pet to life.
+## 🌟 Features
 
-## Bill of Materials (BOM)
-| Part | Qty | Description |
+- **Motion & Tilt Detection:** Integrated MPU6050 6-axis accelerometer and gyroscope to track orientation, shakes, and tilts so you can interact with your pet physically.
+- **Environment Tracking:** Built-in DHT11 sensor to monitor ambient temperature and humidity.
+- **Tactile Mechanical Input:** Uses genuine Cherry MX mechanical switches for satisfying tactile user control.
+- **Crisp Visuals:** Features a 0.96-inch OLED graphic display capable of rendering smooth animations and expressions for your digital pet.
+- **Compact Microcontroller Core:** Powered by the versatile Seeed Studio XIAO ESP32-C3 for low-power operation, Wi-Fi capabilities, and compact integration.
+
+---
+
+## 📦 Bill of Materials (BOM)
+
+| Part Name | Qty | Description |
 | :--- | :---: | :--- |
-| **Seeed Studio XIAO ESP32-C3** | 1 | Microcontroller |
-| **0.96" OLED Graphic Display** | 1 | Display module for the character |
-| **MPU6050** | 1 | Motion and tilt sensor |
-| **Cherry MX Silent Red Switch** | 2 | User input switches |
-| **DHT11 Sensor** | 1 | Temperature & humidity sensor |
-| **10k Resistor** | 1 | Pull-up resistor for the sensor |
+| **Seeed Studio XIAO ESP32-C3** | 1 | Low-power RISC-V microcontroller with Wi-Fi/BLE |
+| **0.96" OLED Graphic Display** | 1 | Monochrome display module (I2C/SPI) for character rendering |
+| **MPU6050 Sensor Module** | 1 | 3-axis accelerometer & 3-axis gyroscope |
+| **Cherry MX Silent Red Switch** | 2 | Mechanical keyboard switches for user input buttons |
+| **DHT11 Sensor** | 1 | Digital temperature and humidity sensor |
+| **10k Resistor** | 1 | Pull-up resistor for sensor stability |
 
-## Project Schematics
+---
 
-<img width="593" height="382" alt="image" src="https://github.com/user-attachments/assets/9ff98d4f-aff8-4787-b942-e1bcef7ba611" />
-<img width="686" height="604" alt="Screenshot 2026-10-09 141937" src="https://github.com/user-attachments/assets/d41827e3-fde1-45f9-87da-9d24950c6901" />
+## 🛠️ Hardware Architecture & Pinout
 
+Starbie's schematic routes all peripherals directly to the XIAO ESP32-C3 breakout headers:
+- **I2C Bus:** Shared between the MPU6050 motion sensor and the 0.96" OLED display.
+- **GPIO Inputs:** Connected to the Cherry MX mechanical switches with internal pull-ups enabled.
+- **Single-Wire Interface:** Dedicated pin for reading temperature and humidity data from the DHT11 module.
 
+---
 
-## Built With
-- **KiCad** - PCB design and schematic routing
-- **Arduino IDE / C++** - Firmware (`starbie.ino`)
+## 🚀 Getting Started & Firmware Installation
+
+### Prerequisites
+- [Arduino IDE](https://www.arduino.cc/en/software) installed on your machine.
+- ESP32 board support packages added via the Arduino Board Manager.
+- Required libraries installed:
+  - `Adafruit_GFX` & `Adafruit_SSD1306` (for the OLED display)
+  - `Adafruit_MPU6050` (for motion tracking)
+  - `DHT sensor library` (for environmental data)
+
+### Flashing the Firmware
+1. Clone this repository or download the source files.
+2. Open the `starbie.ino` file inside the Arduino IDE.
+3. Select your board (`Seeed Studio XIAO_ESP32C3`) and the correct COM port from **Tools > Board**.
+4. Click the **Upload** button to flash the code to your microcontroller.
+
+---
+
+## 📸 Project Preview
+
+*(Add a photo or 3D render of your finished Starbie PCB here)*
+![Starbie Board Design](./images/starbie_preview.png)
+
+---
+
+## 🧰 Built With
+
+- **KiCad** - Schematic capture, custom footprint creation, and PCB layout routing
+- **Arduino IDE / C++** - Firmware development and sensor integration
+
+---
