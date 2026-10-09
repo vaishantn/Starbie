@@ -21,9 +21,12 @@ Starbie is an interactive hardware project built around a custom PCB. It feature
 | **DHT11 Sensor** | 1 | Temperature & humidity sensor |
 | **10k Resistor** | 1 | Pull-up resistor for the sensor |
 
-## Project Preview
-*(Add a photo or render of your finished PCB or board design here)*
-![Starbie Board Design](path_to_your_image.png)
+## Project Schematics
+
+<img width="593" height="382" alt="image" src="https://github.com/user-attachments/assets/9ff98d4f-aff8-4787-b942-e1bcef7ba611" />
+<img width="686" height="604" alt="Screenshot 2026-10-09 141937" src="https://github.com/user-attachments/assets/d41827e3-fde1-45f9-87da-9d24950c6901" />
+
+
 
 ## Built With
 - **KiCad** - PCB design and schematic routing
