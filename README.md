@@ -1,16 +1,26 @@
 # Starbie ⭐
 
-**Starbie** is a tiny, interactive motion-controlled digital pet—think of it as a custom-built, hardware-hackable desktop Tamagotchi! Designed from scratch as a custom PCB, Starbie brings a virtual pet to life using an embedded microcontroller, a crisp OLED display, environmental sensors, tilt detection, and tactile mechanical keyboard switches.
+**Starbie** is a tiny, interactive motion-controlled digital pet—think of a custom-built, hardware-hackable desktop Tamagotchi! Designed from scratch as a custom PCB, Starbie brings a virtual pet to life using an embedded microcontroller, a crisp OLED display, environmental sensors, tilt detection, and tactile mechanical keyboard switches.
+
+---
+
+## 📑 Table of Contents
+- [Features](#-features)
+- [Bill of Materials (BOM)](#-bill-of-materials-bom)
+- [Hardware Architecture & Pinout](#️-hardware-architecture--pinout)
+- [Getting Started & Firmware](#-getting-started--firmware-installation)
+- [Project Schematics](#-project-schematics)
+- [Built With](#-built-with)
 
 ---
 
 ## 🌟 Features
 
-- **Motion & Tilt Detection:** Integrated MPU6050 6-axis accelerometer and gyroscope to track orientation, shakes, and tilts so you can interact with your pet physically.
-- **Environment Tracking:** Built-in DHT11 sensor to monitor ambient temperature and humidity.
-- **Tactile Mechanical Input:** Uses genuine Cherry MX mechanical switches for satisfying tactile user control.
-- **Crisp Visuals:** Features a 0.96-inch OLED graphic display capable of rendering smooth animations and expressions for your digital pet.
-- **Compact Microcontroller Core:** Powered by the versatile Seeed Studio XIAO ESP32-C3 for low-power operation, Wi-Fi capabilities, and compact integration.
+* **Motion & Tilt Detection:** Integrated MPU6050 6-axis accelerometer and gyroscope to track orientation, shakes, and tilts so you can interact with your pet physically.
+* **Environment Tracking:** Built-in DHT11 sensor to monitor ambient temperature and humidity.
+* **Tactile Mechanical Input:** Uses genuine Cherry MX mechanical switches for satisfying tactile user control.
+* **Crisp Visuals:** Features a 0.96-inch OLED graphic display capable of rendering smooth animations and expressions for your digital pet.
+* **Compact Microcontroller Core:** Powered by the versatile Seeed Studio XIAO ESP32-C3 for low-power operation, Wi-Fi capabilities, and compact integration.
 
 ---
 
@@ -30,21 +40,21 @@
 ## 🛠️ Hardware Architecture & Pinout
 
 Starbie's schematic routes all peripherals directly to the XIAO ESP32-C3 breakout headers:
-- **I2C Bus:** Shared between the MPU6050 motion sensor and the 0.96" OLED display.
-- **GPIO Inputs:** Connected to the Cherry MX mechanical switches with internal pull-ups enabled.
-- **Single-Wire Interface:** Dedicated pin for reading temperature and humidity data from the DHT11 module.
+* **I2C Bus:** Shared between the MPU6050 motion sensor and the 0.96" OLED display.
+* **GPIO Inputs:** Connected to the Cherry MX mechanical switches with internal pull-ups enabled.
+* **Single-Wire Interface:** Dedicated pin for reading temperature and humidity data from the DHT11 module.
 
 ---
 
 ## 🚀 Getting Started & Firmware Installation
 
 ### Prerequisites
-- [Arduino IDE](https://www.arduino.cc/en/software) installed on your machine.
-- ESP32 board support packages added via the Arduino Board Manager.
-- Required libraries installed:
-  - `Adafruit_GFX` & `Adafruit_SSD1306` (for the OLED display)
-  - `Adafruit_MPU6050` (for motion tracking)
-  - `DHT sensor library` (for environmental data)
+* [Arduino IDE](https://www.arduino.cc/en/software) installed on your machine.
+* ESP32 board support packages added via the Arduino Board Manager.
+* Required libraries installed:
+  * `Adafruit_GFX` & `Adafruit_SSD1306` (for the OLED display)
+  * `Adafruit_MPU6050` (for motion tracking)
+  * `DHT sensor library` (for environmental data)
 
 ### Flashing the Firmware
 1. Clone this repository or download the source files.
@@ -56,16 +66,17 @@ Starbie's schematic routes all peripherals directly to the XIAO ESP32-C3 breakou
 
 ## 📸 Project Schematics
 
-<img width="593" height="382" alt="Screenshot 2026-10-09 153249" src="https://github.com/user-attachments/assets/fe17d6f6-ae0b-469f-937a-eb095f8114ae" />
+<p align="center">
+  <img width="593" alt="Schematic View" src="https://github.com/user-attachments/assets/fe17d6f6-ae0b-469f-937a-eb095f8114ae">
+</p>
 
-<img width="686" height="604" alt="Screenshot 2026-10-09 141937" src="https://github.com/user-attachments/assets/10f61098-01ef-4143-a8b2-92fef63a2a7b" />
-
+<p align="center">
+  <img width="686" alt="PCB Layout View" src="https://github.com/user-attachments/assets/10f61098-01ef-4143-a8b2-92fef63a2a7b">
+</p>
 
 ---
 
 ## 🧰 Built With
 
-- **KiCad** - Schematic capture, custom footprint creation, and PCB layout routing
-- **Arduino IDE / C++** - Firmware development and sensor integration
-
----
+* **KiCad** - Schematic capture, custom footprint creation, and PCB layout routing
+* **Arduino IDE / C++** - Firmware development and sensor integration
