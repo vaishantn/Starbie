@@ -54,10 +54,12 @@ Starbie's schematic routes all peripherals directly to the XIAO ESP32-C3 breakou
 
 ---
 
-## 📸 Project Preview
+## 📸 Project Schematics
 
-*(Add a photo or 3D render of your finished Starbie PCB here)*
-![Starbie Board Design](./images/starbie_preview.png)
+<img width="593" height="382" alt="Screenshot 2026-10-09 153249" src="https://github.com/user-attachments/assets/fe17d6f6-ae0b-469f-937a-eb095f8114ae" />
+
+<img width="686" height="604" alt="Screenshot 2026-10-09 141937" src="https://github.com/user-attachments/assets/10f61098-01ef-4143-a8b2-92fef63a2a7b" />
+
 
 ---
 
