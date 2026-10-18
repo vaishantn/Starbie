@@ -1,68 +1,15 @@
 # Starbie ⭐
 
-**Starbie** is a tiny, interactive motion-controlled digital pet—think of a custom-built, hardware-hackable desktop Tamagotchi! Designed from scratch as a custom PCB, Starbie brings a virtual pet to life using an embedded microcontroller, a crisp OLED display, environmental sensors, tilt detection, and tactile mechanical keyboard switches.
-
+**Starbie** is a tiny motion-controlled digital pet, basically a desktop Tamagotchi. 
 ---
-
-## 📑 Table of Contents
-- [Features](#-features)
-- [Bill of Materials (BOM)](#-bill-of-materials-bom)
-- [Hardware Architecture & Pinout](#️-hardware-architecture--pinout)
-- [Getting Started & Firmware](#-getting-started--firmware-installation)
-- [Project Schematics](#-project-schematics)
-- [Built With](#-built-with)
-
----
-
-## 🌟 Features
-
-* **Motion & Tilt Detection:** Integrated MPU6050 6-axis accelerometer and gyroscope to track orientation, shakes, and tilts so you can interact with your pet physically.
-* **Environment Tracking:** Built-in DHT11 sensor to monitor ambient temperature and humidity.
-* **Tactile Mechanical Input:** Uses genuine Cherry MX mechanical switches for satisfying tactile user control.
-* **Crisp Visuals:** Features a 0.96-inch OLED graphic display capable of rendering smooth animations and expressions for your digital pet.
-* **Compact Microcontroller Core:** Powered by the versatile Seeed Studio XIAO ESP32-C3 for low-power operation, Wi-Fi capabilities, and compact integration.
-
----
-
-## 📦 Bill of Materials (BOM)
-
-| Part Name | Qty | Description |
-| :--- | :---: | :--- |
-| **Seeed Studio XIAO ESP32-C3** | 1 | Low-power RISC-V microcontroller with Wi-Fi/BLE |
-| **0.96" OLED Graphic Display** | 1 | Monochrome display module (I2C/SPI) for character rendering |
-| **MPU6050 Sensor Module** | 1 | 3-axis accelerometer & 3-axis gyroscope |
-| **Cherry MX Silent Red Switch** | 2 | Mechanical keyboard switches for user input buttons |
-| **DHT11 Sensor** | 1 | Digital temperature and humidity sensor |
-| **10k Resistor** | 1 | Pull-up resistor for sensor stability |
-
----
-
-## 🛠️ Hardware Architecture & Pinout
-
-Starbie's schematic routes all peripherals directly to the XIAO ESP32-C3 breakout headers:
-* **I2C Bus:** Shared between the MPU6050 motion sensor and the 0.96" OLED display.
-* **GPIO Inputs:** Connected to the Cherry MX mechanical switches with internal pull-ups enabled.
-* **Single-Wire Interface:** Dedicated pin for reading temperature and humidity data from the DHT11 module.
-
----
-
-## 🚀 Getting Started & Firmware Installation
-
-### Prerequisites
-* [Arduino IDE](https://www.arduino.cc/en/software) installed on your machine.
-* ESP32 board support packages added via the Arduino Board Manager.
-* Required libraries installed:
-  * `Adafruit_GFX` & `Adafruit_SSD1306` (for the OLED display)
-  * `Adafruit_MPU6050` (for motion tracking)
-  * `DHT sensor library` (for environmental data)
-
-### Flashing the Firmware
-1. Clone this repository or download the source files.
-2. Open the `starbie.ino` file inside the Arduino IDE.
-3. Select your board (`Seeed Studio XIAO_ESP32C3`) and the correct COM port from **Tools > Board**.
-4. Click the **Upload** button to flash the code to your microcontroller.
-
----
+Starbie Features:
+- Detect tilt, acceleration and shaking
+- Senses the temperature and the humidity
+- Nap
+- You can play with it
+- You can Feed it
+- You can Pet it
+- It has a status screen
 
 ## 📸 Project Schematics
 
