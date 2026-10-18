@@ -1,3 +1,17 @@
+/*
+  Starbie: a tiny motion-controlled digital pet
+
+  This is intentionally one file. Open this .ino file in Arduino IDE, edit
+  the BEGINNER SETTINGS section, and upload it to a Seeed XIAO ESP32-C3.
+
+  Install these libraries with Sketch > Include Library > Manage Libraries:
+    - Adafruit GFX Library
+    - Adafruit SSD1306
+    - Adafruit MPU6050
+    - DHT sensor library
+  Arduino IDE will offer to install their dependencies too. Click Install All.
+*/
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -11,8 +25,8 @@
 
 // --- Your board's pins ----------------------------------------------------
 // These are ESP32-C3 GPIO numbers, with the XIAO pin labels beside them.
-const int I2C_SDA_PIN = 6;       // XIAO D4: OLED + MPU6050 SDA
-const int I2C_SCL_PIN = 7;       // XIAO D5: OLED + MPU6050 SCL
+const int I2C_SDA_PIN = 7;       // XIAO D4: OLED + MPU6050 SDA
+const int I2C_SCL_PIN = 6;       // XIAO D5: OLED + MPU6050 SCL
 const int DHT_PIN = 3;           // XIAO D1: DHT11 data
 const int BUTTON_ONE_PIN = 4;    // XIAO D2: opens/confirms the radial menu
 const int BUTTON_TWO_PIN = 5;    // XIAO D3: shows/hides stats
