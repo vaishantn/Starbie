@@ -2,7 +2,7 @@
 
 **Starbie** is a tiny motion-controlled digital pet, basically a desktop Tamagotchi. 
 ---
-Starbie Features:
+## Starbie Features:
 - Detect tilt, acceleration and shaking
 - Senses the temperature and the humidity
 - Nap
@@ -11,7 +11,13 @@ Starbie Features:
 - You can Pet it
 - It has a status screen
 
-## 📸 Project Schematics
+## Bill Of Materials:
+- Microcontroller: Seeed Studio XIAO ESP32-C3 - Qty: 1
+- Display: 0.96" OLED 128x64 - Qty: 1
+- Motion Sensor: MPU6050 - Qty: 1
+- Temperature and Humidity Sensor: DHT11 - Qty: 1
+- Buttons: Cherry MX Linear Switches - Qty: 2 
+##  Project Schematics
 
 <p align="center">
   <img width="593" alt="Schematic View" src="https://github.com/user-attachments/assets/fe17d6f6-ae0b-469f-937a-eb095f8114ae">
@@ -23,7 +29,7 @@ Starbie Features:
 
 ---
 
-## 🧰 Built With
+##  Built With
 
 * **KiCad** - Schematic capture, custom footprint creation, and PCB layout routing
 * **Arduino IDE / C++** - Firmware development and sensor integration
